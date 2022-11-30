@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  tomcat:
+    container_name: tomcat-docker
+    build: tomcat
+    ports:
+      - "8888:8080"
+    volumes:
+      - ./webapps:/usr/local/tomcat/webapps
+      - ./tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+    
